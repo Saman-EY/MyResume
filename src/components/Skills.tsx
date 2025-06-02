@@ -116,6 +116,12 @@ const skills = [
     spanClass: "rounded-full p-4",
   },
   {
+    name: "JavaScript",
+    img: "/assets/js-icon.svg",
+    imgClass: "w-18 h-18",
+    spanClass: "rounded-full p-4",
+  },
+  {
     name: "Html",
     img: "/assets/html-icon.svg",
     imgClass: "w-18 h-18",

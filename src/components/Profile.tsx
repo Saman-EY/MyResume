@@ -13,9 +13,10 @@ function Profile() {
         <div className="bg-[#F8E7A1] h-1 lg:w-60 rounded-lg my-5"></div>
 
         <p className="text-gray-300 text-lg lg:max-w-76 font-normal">
-          Eget malesuada tortor ut sed. Tincidunt viverra malesuada nisl
-          vehicula vestibulum. Ut blandit fermentum, cursus nulla. Imperdiet
-          neque mi convallis quis interdum sagittis.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Necessitatibus consequuntur aperiam minus consequatur repellat illo
+          nostrum minima accusantium dolores dolorum, fugiat, magni consectetur
+          dolore doloribus. Soluta quidem iste beatae sit!
         </p>
 
         <button className="text-CusYellow  min-w-36 group mt-5 font-medium w-fit flex items-center gap-2">
