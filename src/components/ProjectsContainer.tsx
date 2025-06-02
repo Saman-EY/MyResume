@@ -21,8 +21,8 @@ const projectsData = [
     title: "Bermooda (Dashboard and Landing site)",
     description:
       "Nextjs - Tailwindcss - Redux - Antdesign - React Query , TypeScript",
-    image1: "/assets/Bermooda2.png",
-    image2: "/assets/Bermooda1.png",
+    image1: "/assets/bermooda2.png",
+    image2: "/assets/bermooda1.png",
   },
   {
     title: "Ali Qomi",
