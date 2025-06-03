@@ -1,3 +1,5 @@
+import ConnectSection from "@/components/ConnectSection";
+import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import Profile from "@/components/Profile";
 import ProjectsContainer from "@/components/ProjectsContainer";
@@ -6,7 +8,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative  h-screen overflow-auto flex flex-col">
       <Image
         alt=""
         src={"/assets/color1.svg"}
@@ -18,6 +20,8 @@ export default function Home() {
       <Profile />
       <Skills />
       <ProjectsContainer />
+      <ConnectSection />
+      <Footer />
     </main>
   );
 }

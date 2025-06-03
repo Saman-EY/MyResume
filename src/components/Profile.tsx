@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Profile() {
   return (
-    <section className="flex flex-col-reverse lg:flex-row justify-between gap-15 CustomContainer1000px px-3 lg:px-10 mt-10 items-center">
+    <section className="flex flex-col-reverse lg:flex-row justify-between gap-15 CustomContainer1400px px-3 lg:px-10 mt-10 items-center">
       <div className="flex flex-col gap-4 w-full px-5 lg:w-auto  max-w-144 lg:max-w-none">
         <h6 className="text-white text-4xl font-semibold">Saman Ezzatabadi</h6>
         <h6 className="text-gray-300 text-2xl font-semibold">
@@ -12,19 +13,25 @@ function Profile() {
 
         <div className="bg-[#F8E7A1] h-1 lg:w-60 rounded-lg my-5"></div>
 
-        <p className="text-gray-300 text-lg lg:max-w-76 font-normal">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Necessitatibus consequuntur aperiam minus consequatur repellat illo
-          nostrum minima accusantium dolores dolorum, fugiat, magni consectetur
-          dolore doloribus. Soluta quidem iste beatae sit!
+        <p className="text-gray-300 text-lg lg:max-w-76 font-normal ">
+          I’m a Front-end Developer with nearly a year of hands-on experience
+          building responsive and modern web interfaces. I specialize in React
+          and Next.js, and I’m confident working with both Tailwind CSS and
+          plain CSS to craft pixel-perfect, mobile-friendly layouts. I’m also
+          comfortable using component libraries like Ant Design to bring complex
+          UIs to life efficiently and elegantly.
         </p>
 
-        <button className="text-CusYellow  min-w-36 group mt-5 font-medium w-fit flex items-center gap-2">
+        <Link
+          href={"https://www.linkedin.com/in/saman-ezzatabadi"}
+          target="_blank"
+          className="text-CusYellow  min-w-36 group mt-5 font-medium w-fit flex items-center gap-2"
+        >
           Let's talk
           <span className="group-hover:translate-x-12 transition-transform duration-300">
             <ArrowSvg />
           </span>
-        </button>
+        </Link>
       </div>
 
       <section className="flex flex-col lg:flex-row gap-4 ">

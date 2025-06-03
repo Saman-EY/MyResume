@@ -33,8 +33,11 @@ body {
 .CustomContainer1680px {
   @apply mx-auto w-full max-w-[1680px];
 }
-.CustomContainer1000px {
+.CustomContainer1400px {
   @apply mx-auto w-full max-w-[1400px];
+}
+.CustomContainer1800px {
+  @apply mx-auto w-full max-w-[1800px];
 }
 
 button {
