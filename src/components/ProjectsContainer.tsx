@@ -1,7 +1,7 @@
-import { link } from "fs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Slide } from "react-awesome-reveal";
 
 interface ProjectCardProps {
   data: {
@@ -135,13 +135,13 @@ function ProjectsContainer() {
 
       <h6 className="text-center text-3xl font-mono mb-4">My Projects</h6>
 
-      <section className="w-full max-w-544 mx-auto bg-[#062559]/20 backdrop-blur-2xl p-5 rounded-lg grid grid-cols-[repeat(auto-fill,minmax(360px,1fr))] gap-5">
-        {projectsData.map((project, index) => (
-          <ProjectCard key={index} data={project} />
-        ))}
-      </section>
-
-
+      <Slide direction="left" cascade triggerOnce>
+        <section className="w-full max-w-544 mx-auto bg-[#062559]/20 backdrop-blur-2xl p-5 rounded-lg grid grid-cols-[repeat(auto-fill,minmax(360px,1fr))] gap-5">
+          {projectsData.map((project, index) => (
+            <ProjectCard key={index} data={project} />
+          ))}
+        </section>
+      </Slide>
 
       <Image
         alt=""
