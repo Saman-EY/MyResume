@@ -54,7 +54,7 @@ function Profile() {
               <span className="font-semibold text-xl lg:max-w-40 text-end text-Secondary">
                 Years of Experience
               </span>
-              <span className="font-bold text-2xl ">8 Month+</span>
+              <span className="font-bold text-2xl ">1+</span>
             </div>
             <div className="flex flex-col gap-3 items-end">
               <span className="font-semibold text-xl lg:max-w-32 text-end text-Secondary">
