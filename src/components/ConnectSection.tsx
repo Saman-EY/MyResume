@@ -54,7 +54,7 @@ function ConnectSection() {
                   );
                 }}
                 type="text"
-                className="bg-[#09214a] rounded outline-0 px-2 py-2 min-w-120"
+                className="bg-[#09214a] rounded outline-0 px-2 py-2 md:min-w-120"
               />
             </label>
             <label className="flex flex-col gap-3" htmlFor="name">
@@ -68,7 +68,7 @@ function ConnectSection() {
                   );
                 }}
                 type="text"
-                className="bg-[#09214a] rounded outline-0 px-2 py-2 min-w-120"
+                className="bg-[#09214a] rounded outline-0 px-2 py-2 md:min-w-120"
               />
             </label>
             <label className="flex flex-col gap-3" htmlFor="name">
@@ -82,7 +82,7 @@ function ConnectSection() {
                   );
                 }}
                 rows={5}
-                className="bg-[#09214a] rounded outline-0 px-2 py-2 min-w-120 resize-none"
+                className="bg-[#09214a] rounded outline-0 px-2 py-2 md:min-w-120 resize-none"
               />
             </label>
             <button

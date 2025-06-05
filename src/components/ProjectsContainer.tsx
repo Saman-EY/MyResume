@@ -124,7 +124,7 @@ const projectsData = [
 
 function ProjectsContainer() {
   return (
-    <section className="px-5 mb-5 relative mt-20">
+    <section className="px-2 md:px-5 mb-5 relative mt-20">
       <Image
         alt=""
         src={"/assets/color3.svg"}
@@ -136,7 +136,7 @@ function ProjectsContainer() {
       <h6 className="text-center text-3xl font-mono mb-4">My Projects</h6>
 
       <Slide direction="left" cascade triggerOnce>
-        <section className="w-full max-w-544 mx-auto bg-[#062559]/20 backdrop-blur-2xl p-5 rounded-lg grid grid-cols-[repeat(auto-fill,minmax(360px,1fr))] gap-5">
+        <section className="w-full max-w-544 mx-auto bg-[#062559]/20 backdrop-blur-2xl py-5 px-1  md:px-5 rounded-lg grid grid-cols-[repeat(auto-fill,minmax(360px,1fr))] gap-5">
           {projectsData.map((project, index) => (
             <ProjectCard key={index} data={project} />
           ))}
@@ -161,9 +161,9 @@ const ProjectCard = ({ data }: ProjectCardProps) => {
     <Link
       href={data?.link ?? ""}
       target={data?.link ? "_blank" : undefined}
-      className="mx-auto rounded-lg w-90 group overflow-hidden bg-[#062559]/30  border border-transparent transition-all duration-300  hover:scale-105  hover:border-[#4E339D] hover:shadow-lg shadow-[#4E339D]"
+      className="mx-auto rounded-lg w-70 sm:w-90 group overflow-hidden bg-[#062559]/30  border border-transparent transition-all duration-300  hover:scale-105  hover:border-[#4E339D] hover:shadow-lg shadow-[#4E339D]"
     >
-      <div className="w-90 h-67.5 overflow-hidden relative">
+      <div className="w-70 sm:w-90 h-67.5 overflow-hidden relative">
         <Image
           alt="project img"
           src={data?.image1}
