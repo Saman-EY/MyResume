@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 function Profile() {
   return (
-    <section className="flex flex-col-reverse lg:flex-row justify-between gap-15 CustomContainer1400px px-3 lg:px-10 mt-10 items-center">
+    <section className="flex flex-col lg:flex-row justify-between gap-15 CustomContainer1400px px-3 lg:px-10 mt-10 items-center">
       <Fade cascade direction="left" triggerOnce>
         <div className="flex flex-col gap-4 w-full px-5 lg:w-auto  max-w-144 lg:max-w-none">
           <h6 className="text-white text-4xl font-semibold">

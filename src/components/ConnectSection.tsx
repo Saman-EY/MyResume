@@ -32,6 +32,13 @@ function ConnectSection() {
           </div>
 
           <Slide cascade triggerOnce direction="left">
+            {/* <Image
+              className="w-full md:w-150 h-110 object-contain rounded"
+              alt=""
+              src="/assets/programming.png"
+              width={700}
+              height={700}
+            /> */}
             <Image
               className="w-full md:w-150 h-100 object-cover rounded"
               alt=""
