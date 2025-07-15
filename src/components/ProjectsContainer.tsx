@@ -23,8 +23,7 @@ const projectsData = [
   },
   {
     title: "Bermooda (Dashboard and Landing site)",
-    description:
-      "Nextjs - Tailwindcss - Redux - Antdesign - React Query - TypeScript",
+    description: "Nextjs - Tailwindcss - Redux - Antdesign - React Query - TypeScript",
     image1: "/assets/bermooda2.png",
     image2: "/assets/bermooda1.png",
     link: "https://office.bermooda.app",
@@ -42,6 +41,13 @@ const projectsData = [
     image1: "/assets/atic1.png",
     image2: "/assets/atic2.png",
     link: "https://atticbv.com",
+  },
+  {
+    title: "Yari plane (Landing Template)",
+    description: "Html - CSS - JavaScript",
+    image1: "/assets/plane1.png",
+    image2: "/assets/plane2.png",
+    link: "https://yari-plane.vercel.app",
   },
   {
     title: "Tourist",
@@ -92,6 +98,7 @@ const projectsData = [
     image2: "/assets/macan2.png",
     link: "https://macan-choob.vercel.app",
   },
+
   {
     title: "Tarhamo (Template)",
     description: "Html - CSS - JavaScript",
@@ -113,13 +120,13 @@ const projectsData = [
     image2: "/assets/telbox2.png",
     link: "https://telbox-test.vercel.app",
   },
-  {
-    title: "Sign up validation (Form practice)",
-    description: "React - axios",
-    image1: "/assets/form.png",
-    image2: null,
-    link: "https://sign-up-validation-nova.vercel.app/login",
-  },
+  // {
+  //   title: "Sign up validation (Form practice)",
+  //   description: "React - axios",
+  //   image1: "/assets/form.png",
+  //   image2: null,
+  //   link: "https://sign-up-validation-nova.vercel.app/login",
+  // },
 ];
 
 function ProjectsContainer() {

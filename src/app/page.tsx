@@ -16,7 +16,7 @@ export default function Home() {
         height={400}
         className="w-fit  object-contain absolute  right-0 -z-10"
       />
-      <Nav />
+      {/* <Nav /> */}
       <Profile />
       <Skills />
       <ProjectsContainer />
