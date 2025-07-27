@@ -17,12 +17,12 @@ export default function Home() {
         className="w-fit  object-contain absolute  right-0 -z-10"
       />
 
-      <Nav />
+      {/* <Nav /> */}
       <Profile />
       <Skills />
       <ProjectsContainer />
-      <ConnectSection />
-      <Footer />
+      {/* <ConnectSection /> */}
+      {/* <Footer /> */}
     </main>
   );
 }
