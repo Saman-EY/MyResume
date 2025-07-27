@@ -26,7 +26,7 @@ function Profile() {
             complex UIs to life efficiently and elegantly.
           </p>
 
-          <Link
+          {/* <Link
             href={"https://www.linkedin.com/in/saman-ezzatabadi"}
             target="_blank"
             className="text-CusYellow  min-w-36 group mt-5 font-medium w-fit flex items-center gap-2"
@@ -35,7 +35,7 @@ function Profile() {
             <span className="group-hover:translate-x-12 transition-transform duration-300">
               <ArrowSvg />
             </span>
-          </Link>
+          </Link> */}
         </div>
       </Fade>
 
