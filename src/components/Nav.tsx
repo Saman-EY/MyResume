@@ -7,7 +7,7 @@ function Nav() {
         SAMAN{" "}
         <span className="size-1 bg-CusYellow rounded-full block absolute -right-2 top-1"></span>{" "}
       </span>
-      <span className="font-semibold text-2xl">09126107871</span>
+      {/* <span className="font-semibold text-2xl">09126107871</span> */}
     </nav>
   );
 }

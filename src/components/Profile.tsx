@@ -27,7 +27,7 @@ function Profile() {
           </p>
 
           {/* <Link
-            href={"https://www.linkedin.com/in/saman-ezzatabadi"}
+            href={"/"}
             target="_blank"
             className="text-CusYellow  min-w-36 group mt-5 font-medium w-fit flex items-center gap-2"
           >
