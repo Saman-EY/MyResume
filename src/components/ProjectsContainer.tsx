@@ -36,6 +36,13 @@ const projectsData = [
     link: "https://vila-local.vercel.app",
   },
   {
+    title: "Cartan (Landing Template)",
+    description: "Html - CSS - SASS - JavaScript",
+    image1: "/assets/cartan1.png",
+    image2: "/assets/cartan2.png",
+    link: "https://cartan.vercel.app",
+  },
+  {
     title: "Atic shop",
     description: "Nextjs - TypeSript - Tailwindcss - HeroUi - Redux",
     image1: "/assets/atic1.png",
@@ -43,8 +50,15 @@ const projectsData = [
     link: "https://atticbv.com",
   },
   {
+    title: "Png Downloader",
+    description: "Nextjs - TypeSript - Tailwindcss - i18next",
+    image1: "/assets/dl1.png",
+    image2: "/assets/dl2.png",
+    link: "https://png-web.vercel.app/en",
+  },
+  {
     title: "Yari plane (Landing Template)",
-    description: "Html - CSS - JavaScript",
+    description: "Html - CSS - SASS - JavaScript",
     image1: "/assets/plane1.png",
     image2: "/assets/plane2.png",
     link: "https://yari-plane.vercel.app",
@@ -57,6 +71,13 @@ const projectsData = [
     link: "https://touristweb.netlify.app",
   },
   {
+    title: "Parvaz-blourine (currently inactive)",
+    description: "Nextjs - TypeSript - Tailwindcss - Context",
+    image1: "/assets/parvaz-blourin1.png",
+    image2: "/assets/parvaz-blourin2.png",
+    link: "https://parvaz-blourine.vercel.app",
+  },
+  {
     title: "Shop template",
     description: "Nextjs - Tailwindcss",
     image1: "/assets/shop1.png",
@@ -65,7 +86,8 @@ const projectsData = [
   },
   {
     title: "Cafe (Template)",
-    description: "Html - CSS - JavaScript",
+    description: "Html - CSS - SASS - JavaScript",
+
     image1: "/assets/cafe2.png",
     image2: "/assets/cafe1.png",
     link: "https://cafe-template-1.vercel.app",
@@ -79,7 +101,7 @@ const projectsData = [
   },
   {
     title: "AKP (Template)",
-    description: "Html - CSS - JavaScript",
+    description: "Html - CSS - SASS - JavaScript",
     image1: "/assets/akp1.png",
     image2: "/assets/akp2.png",
     link: "https://akp-landing.vercel.app",
@@ -93,7 +115,7 @@ const projectsData = [
   },
   {
     title: "Macan choob (Template)",
-    description: "Html - CSS - JavaScript",
+    description: "Html - CSS - SASS - JavaScript",
     image1: "/assets/macan1.png",
     image2: "/assets/macan2.png",
     link: "https://macan-choob.vercel.app",
@@ -101,7 +123,7 @@ const projectsData = [
 
   {
     title: "Tarhamo (Template)",
-    description: "Html - CSS - JavaScript",
+    description: "Html - CSS - SASS - JavaScript",
     image1: "/assets/tarhamo2.png",
     image2: "/assets/tarhamo1.png",
     link: "https://tarhamo.vercel.app",
