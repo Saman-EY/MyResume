@@ -15,6 +15,13 @@ interface ProjectCardProps {
 
 const projectsData = [
   {
+    title: "TrustStake App",
+    description: "Nextjs - Tailwindcss - zustand - PWA - React Query",
+    image1: "/assets/trust1.png",
+    image2: "/assets/trust2.png",
+    link: "https://truststake.app/fa-IR",
+  },
+  {
     title: "JahanZar",
     description: "Nextjs - Tailwindcss - Redux",
     image1: "/assets/jahanzar1.png",
