@@ -16,7 +16,7 @@ interface ProjectCardProps {
 const projectsData = [
   {
     title: "TrustStake App",
-    description: "Nextjs - Tailwindcss - zustand - PWA - React Query",
+    description: "Nextjs - Typescript - Tailwindcss - Zustand - PWA - React Query - Framer motion",
     image1: "/assets/trust1.png",
     image2: "/assets/trust2.png",
     link: "https://truststake.app/fa-IR",
@@ -26,7 +26,8 @@ const projectsData = [
     description: "Nextjs - Tailwindcss - Redux",
     image1: "/assets/jahanzar1.png",
     image2: "/assets/jahanzar2.png",
-    link: "https://jahan-zar.vercel.app",
+    // link: "https://jahan-zar.vercel.app",
+    link: "https://parniangold.com",
   },
   {
     title: "Bermooda (Dashboard and Landing site)",
@@ -34,20 +35,6 @@ const projectsData = [
     image1: "/assets/bermooda2.png",
     image2: "/assets/bermooda1.png",
     link: "https://office.bermooda.app",
-  },
-  {
-    title: "Ali Qomi",
-    description: "React - Tailwindcss - Context - framer motion",
-    image1: "/assets/vila1.png",
-    image2: "/assets/vila2.png",
-    link: "https://vila-local.vercel.app",
-  },
-  {
-    title: "Cartan (Landing Template)",
-    description: "Html - CSS - SASS - JavaScript",
-    image1: "/assets/cartan1.png",
-    image2: "/assets/cartan2.png",
-    link: "https://cartan.vercel.app",
   },
   {
     title: "Atic shop",
@@ -61,7 +48,22 @@ const projectsData = [
     description: "Nextjs - TypeSript - Tailwindcss - i18next",
     image1: "/assets/dl1.png",
     image2: "/assets/dl2.png",
-    link: "https://png-web.vercel.app/en",
+    // link: "https://png-web.vercel.app/en",
+    link: "https://pngmagnet.com/en",
+  },
+  {
+    title: "Ali Qomi",
+    description: "React - Tailwindcss - Context - Framer motion",
+    image1: "/assets/vila1.png",
+    image2: "/assets/vila2.png",
+    link: "https://vila-local.vercel.app",
+  },
+  {
+    title: "Cartan (Landing Template)",
+    description: "Html - CSS - SASS - JavaScript",
+    image1: "/assets/cartan1.png",
+    image2: "/assets/cartan2.png",
+    link: "https://cartan.vercel.app",
   },
   {
     title: "Yari plane (Landing Template)",
