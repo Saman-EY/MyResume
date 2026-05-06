@@ -19,15 +19,15 @@ const projectsData = [
     description: "Nextjs - Typescript - Tailwindcss - Zustand - PWA - React Query - Framer motion",
     image1: "/assets/trust1.png",
     image2: "/assets/trust2.png",
-    link: "https://truststake.app/fa-IR",
+    link: "https://goldstake.top/fa-IR",
   },
   {
     title: "JahanZar",
     description: "Nextjs - Tailwindcss - Redux",
     image1: "/assets/jahanzar1.png",
     image2: "/assets/jahanzar2.png",
-    // link: "https://jahan-zar.vercel.app",
-    link: "https://parniangold.com",
+    link: "https://jahan-zar.vercel.app",
+    // link: "https://parniangold.com",
   },
   {
     title: "Bermooda (Dashboard and Landing site)",
