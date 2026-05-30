@@ -16,10 +16,6 @@ export function Contact() {
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [isSubmittedForm, setIsSubmittedForm] = useState(false);
 
-  // add inside your form JSX
-
-  console.log(turnstileToken);
-
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (!turnstileToken) {
