@@ -5,13 +5,50 @@ import { Mail, Send } from "lucide-react";
 import { Fade, Slide } from "react-awesome-reveal";
 import Link from "next/link";
 import { Dispatch, SetStateAction, useState } from "react";
+import { toast } from "sonner";
 
 export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    if (!name || !email || !message) {
+      toast.error("Please fill in all fields.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        // show first validation error if exists
+        const firstError = data.invalidParams ? Object.values(data.invalidParams)[0] : data.message;
+
+        toast.error(firstError as string);
+        return;
+      }
+
+      toast.success("Message sent! I'll get back to you soon.");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section id="contact" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
@@ -72,7 +109,7 @@ export function Contact() {
             </Slide>
             <Slide direction="right" triggerOnce cascade damping={0.1}>
               <form
-                onSubmit={() => handleSubmit()}
+                onSubmit={(e) => handleSubmit(e)}
                 className="relative rounded-2xl border border-white/10 bg-white/4 p-6 backdrop-blur-xl md:p-8"
               >
                 <div className="space-y-5">
@@ -90,7 +127,8 @@ export function Contact() {
                   </div>
                   <button
                     type="submit"
-                    className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-medium text-slate-900 shadow-[0_10px_40px_-10px_rgba(255,255,255,0.4)] transition-transform hover:-translate-y-0.5"
+                    disabled={loading}
+                    className={`group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-medium text-slate-900 shadow-[0_10px_40px_-10px_rgba(255,255,255,0.4)] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none `}
                   >
                     Send Message
                     <Send size={15} className="transition-transform group-hover:translate-x-0.5" />
