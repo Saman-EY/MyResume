@@ -14,23 +14,19 @@ export function Contact() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [isSubmittedForm, setIsSubmittedForm] = useState(false);
 
   // add inside your form JSX
-  <Turnstile
-    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
-    onSuccess={(token) => setTurnstileToken(token)}
-    onExpire={() => setTurnstileToken(null)}
-  />;
 
   console.log(turnstileToken);
 
   const handleSubmit = async (e: any) => {
+    e.preventDefault();
     if (!turnstileToken) {
       toast.error("Please complete the captcha.");
       return;
     }
 
-    e.preventDefault();
     if (!name || !email || !message) {
       toast.error("Please fill in all fields.");
       return;
@@ -42,7 +38,7 @@ export function Contact() {
       const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, turnstileToken }),
       });
 
       const data = await res.json();
@@ -59,6 +55,7 @@ export function Contact() {
       setName("");
       setEmail("");
       setMessage("");
+      setIsSubmittedForm(true);
     } catch (err) {
       toast.error("Something went wrong. Please try again.");
     } finally {
@@ -124,33 +121,45 @@ export function Contact() {
               </div>
             </Slide>
             <Slide direction="right" triggerOnce cascade damping={0.1}>
-              <form
-                onSubmit={(e) => handleSubmit(e)}
-                className="relative rounded-2xl border border-white/10 bg-white/4 p-6 backdrop-blur-xl md:p-8"
-              >
-                <div className="space-y-5">
-                  <Field value={name} setValue={setName} label="Name" placeholder="Your name" />
-                  <Field value={email} setValue={setEmail} label="Email" type="email" placeholder="you@mail.com" />
-                  <div>
-                    <label className="mb-1.5 block text-xs uppercase tracking-wider text-white/60">Message *</label>
-                    <textarea
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      rows={5}
-                      placeholder="Tell me about your project…"
-                      className="w-full rounded-xl border border-white/10 bg-white/4 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-white/30 focus:bg-white/[0.07]"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className={`group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-medium text-slate-900 shadow-[0_10px_40px_-10px_rgba(255,255,255,0.4)] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none `}
-                  >
-                    Send Message
-                    <Send size={15} className="transition-transform group-hover:translate-x-0.5" />
-                  </button>
+              {isSubmittedForm ? (
+                <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-white/4 p-6 backdrop-blur-xl md:p-8">
+                  <h3 className="text-2xl font-semibold text-white">Thank you for reaching out!</h3>
+                  <p className="text-center text-white/70">I'll get back to you as soon as possible.</p>
                 </div>
-              </form>
+              ) : (
+                <form
+                  onSubmit={(e) => handleSubmit(e)}
+                  className="relative rounded-2xl border border-white/10 bg-white/4 p-6 backdrop-blur-xl md:p-8"
+                >
+                  <div className="space-y-5">
+                    <Field value={name} setValue={setName} label="Name" placeholder="Your name" />
+                    <Field value={email} setValue={setEmail} label="Email" type="email" placeholder="you@mail.com" />
+                    <div>
+                      <label className="mb-1.5 block text-xs uppercase tracking-wider text-white/60">Message *</label>
+                      <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        rows={5}
+                        placeholder="Tell me about your project…"
+                        className="w-full rounded-xl border border-white/10 bg-white/4 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-white/30 focus:bg-white/[0.07]"
+                      />
+                    </div>
+                    <Turnstile
+                      siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                      onSuccess={(token) => setTurnstileToken(token)}
+                      onExpire={() => setTurnstileToken(null)}
+                    />
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className={`group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-medium text-slate-900 shadow-[0_10px_40px_-10px_rgba(255,255,255,0.4)] transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none `}
+                    >
+                      Send Message
+                      <Send size={15} className="transition-transform group-hover:translate-x-0.5" />
+                    </button>
+                  </div>
+                </form>
+              )}
             </Slide>
           </div>
         </div>
