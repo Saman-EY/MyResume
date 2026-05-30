@@ -29,7 +29,6 @@ export const frontendProjects: Project[] = [
     second_image: "/atic2.png",
     placeholder: "AS",
   },
-
   {
     name: "JahanZar",
     link: "https://jahan-zar.vercel.app",
@@ -39,17 +38,15 @@ export const frontendProjects: Project[] = [
     second_image: "/jahanzar2.png",
     placeholder: "JZ",
   },
-
   {
-    name: "PNG Downloader",
-    link: "",
-    stack: ["Next.js", "TypeScript", "Tailwind", "i18next"],
-    gradient: "from-pink-400/30 to-rose-500/20",
-    image: "/dl1.png",
-    second_image: "/dl2.png",
-    placeholder: "PD",
+    name: "Bazargan",
+    link: "https://bongah.vercel.app",
+    stack: ["Next.js", "TypeScript", "Tailwind", "Zustand"],
+    gradient: "from-green-400/30 to-green-800/20",
+    image: "/bazargan1.png",
+    second_image: "/bazargan2.png",
+    placeholder: "BZ",
   },
-
   {
     name: "Parvaz-Blourine",
     link: "https://parvaz-blourine.vercel.app",
@@ -59,7 +56,15 @@ export const frontendProjects: Project[] = [
     second_image: "/parvaz-blourin2.png",
     placeholder: "PB",
   },
-
+  {
+    name: "PNG Downloader",
+    link: "",
+    stack: ["Next.js", "TypeScript", "Tailwind", "i18next"],
+    gradient: "from-pink-400/30 to-rose-500/20",
+    image: "/dl1.png",
+    second_image: "/dl2.png",
+    placeholder: "PD",
+  },
   {
     name: "Ali Qomi",
     link: "https://vila-local.vercel.app",
@@ -69,7 +74,6 @@ export const frontendProjects: Project[] = [
     second_image: "/vila2.png",
     placeholder: "AQ",
   },
-
   {
     name: "Yari Plane — Landing",
     link: "https://yari-plane.vercel.app",
@@ -79,7 +83,6 @@ export const frontendProjects: Project[] = [
     second_image: "/plane2.png",
     placeholder: "YP",
   },
-
   {
     name: "Cartan — Landing",
     link: "https://cartan.vercel.app",
@@ -89,7 +92,6 @@ export const frontendProjects: Project[] = [
     second_image: "/cartan2.png",
     placeholder: "CA",
   },
-
   {
     name: "Tourist",
     link: "https://touristweb.netlify.app",
@@ -99,7 +101,6 @@ export const frontendProjects: Project[] = [
     second_image: "/tourist2.png",
     placeholder: "TO",
   },
-
   {
     name: "Shop Template",
     link: "https://dress-shop-saman-ey.vercel.app",
@@ -109,7 +110,6 @@ export const frontendProjects: Project[] = [
     second_image: "/shop2.png",
     placeholder: "SH",
   },
-
   {
     name: "Cafe Template",
     link: "https://cafe-template-1.vercel.app",
@@ -119,7 +119,6 @@ export const frontendProjects: Project[] = [
     second_image: "/cafe1.png",
     placeholder: "CF",
   },
-
   {
     name: "AKP Template",
     link: "https://akp-landing.vercel.app",
@@ -129,7 +128,6 @@ export const frontendProjects: Project[] = [
     second_image: "/akp2.png",
     placeholder: "AK",
   },
-
   {
     name: "Mobix Template",
     link: "https://mobix-delta.vercel.app",
@@ -139,7 +137,6 @@ export const frontendProjects: Project[] = [
     second_image: "/mobix2.png",
     placeholder: "MB",
   },
-
   {
     name: "Macan Choob",
     link: "https://macan-choob.vercel.app",
@@ -149,7 +146,6 @@ export const frontendProjects: Project[] = [
     second_image: "/macan2.png",
     placeholder: "MC",
   },
-
   {
     name: "Tarhamo Template",
     link: "https://tarhamo.vercel.app",

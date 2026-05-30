@@ -130,6 +130,7 @@ export function Skills() {
                 style={{ background: s.color }}
               />
               <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/30 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/30 to-transparent" />
               <div className="relative flex flex-col items-center gap-3">
                 <SkillGlyph icon={s.icon} color={s.color} />
                 <span className="text-sm font-medium text-white/85">{s.name}</span>

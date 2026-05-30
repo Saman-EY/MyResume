@@ -4,8 +4,15 @@ import Image from "next/image";
 import { Mail, Send } from "lucide-react";
 import { Fade, Slide } from "react-awesome-reveal";
 import Link from "next/link";
+import { Dispatch, SetStateAction, useState } from "react";
 
 export function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = () => {};
+
   return (
     <section id="contact" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
       <Fade triggerOnce cascade damping={0.1} className="w-full">
@@ -65,15 +72,17 @@ export function Contact() {
             </Slide>
             <Slide direction="right" triggerOnce cascade damping={0.1}>
               <form
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={() => handleSubmit()}
                 className="relative rounded-2xl border border-white/10 bg-white/4 p-6 backdrop-blur-xl md:p-8"
               >
                 <div className="space-y-5">
-                  <Field label="Name" placeholder="Your name" />
-                  <Field label="Email" type="email" placeholder="you@mail.com" />
+                  <Field value={name} setValue={setName} label="Name" placeholder="Your name" />
+                  <Field value={email} setValue={setEmail} label="Email" type="email" placeholder="you@mail.com" />
                   <div>
-                    <label className="mb-1.5 block text-xs uppercase tracking-wider text-white/60">Message</label>
+                    <label className="mb-1.5 block text-xs uppercase tracking-wider text-white/60">Message *</label>
                     <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       rows={5}
                       placeholder="Tell me about your project…"
                       className="w-full rounded-xl border border-white/10 bg-white/4 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-white/30 focus:bg-white/[0.07]"
@@ -101,14 +110,27 @@ export function Contact() {
   );
 }
 
-function Field({ label, type = "text", placeholder }: { label: string; type?: string; placeholder?: string }) {
+type FieldProps = {
+  label: string;
+  value: string;
+  setValue: Dispatch<SetStateAction<string>>;
+  type?: string;
+  placeholder?: string;
+};
+
+function Field({ label, setValue, value, type = "text", placeholder }: FieldProps) {
   return (
     <div>
-      <label className="mb-1.5 block text-xs uppercase tracking-wider text-white/60">{label}</label>
+      <label className="mb-1.5 block text-xs uppercase tracking-wider text-white/60">{label} *</label>
       <input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
         type={type}
         placeholder={placeholder}
         className="w-full rounded-xl border border-white/10 bg-white/4 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-white/30 focus:bg-white/[0.07]"
+        onInput={(e) => {
+          e.currentTarget.value = e.currentTarget.value.replace(/^\s+/, "");
+        }}
       />
     </div>
   );
