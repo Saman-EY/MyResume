@@ -6,14 +6,30 @@ import { Fade, Slide } from "react-awesome-reveal";
 import Link from "next/link";
 import { Dispatch, SetStateAction, useState } from "react";
 import { toast } from "sonner";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+
+  // add inside your form JSX
+  <Turnstile
+    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+    onSuccess={(token) => setTurnstileToken(token)}
+    onExpire={() => setTurnstileToken(null)}
+  />;
+
+  console.log(turnstileToken);
 
   const handleSubmit = async (e: any) => {
+    if (!turnstileToken) {
+      toast.error("Please complete the captcha.");
+      return;
+    }
+
     e.preventDefault();
     if (!name || !email || !message) {
       toast.error("Please fill in all fields.");
