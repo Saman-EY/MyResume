@@ -4,6 +4,7 @@ import { Skills } from "./components/Skills";
 
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import { Suspense } from "react";
 
 function Page() {
   return (
@@ -38,7 +39,9 @@ function Page() {
 
       <Hero />
       <Skills />
-      <Projects />
+      <Suspense fallback={null}>
+        <Projects />
+      </Suspense>
       <Contact />
     </main>
   );

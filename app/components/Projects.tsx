@@ -4,7 +4,7 @@ import { ExternalLink } from "lucide-react";
 
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { backendProjects, frontendProjects } from "@/libs/variables";
+import { backendProjects, frontendProjects } from "@/lib/variables";
 import { Fade, Slide } from "react-awesome-reveal";
 import { useSearchParams } from "next/navigation";
 
@@ -23,80 +23,6 @@ export type BackProject = {
   gradient: string;
   placeholder: string;
 };
-
-function ProjectCard({ p }: { p: Project }) {
-  return (
-    <Link
-      href={p.link}
-      target="_blank"
-      className="cursor-pointer group relative overflow-hidden rounded-2xl border border-white/10 bg-white/4 backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-white/20"
-    >
-      <div
-        aria-hidden
-        className={`absolute -top-20 -right-20 h-48 w-48 rounded-full bg-linear-to-br ${p.gradient} opacity-60 blur-3xl transition-opacity group-hover:opacity-100`}
-      />
-      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/30 to-transparent" />
-
-      <div className="relative h-48 w-full overflow-hidden">
-        {/* {p.image ? (
-          <Image
-            src={p.image}
-            alt={`${p.name} preview`}
-            width={512}
-            height={512}
-            loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        ) : (
-          <div className={`flex h-full w-full items-center justify-center bg-linear-to-br ${p.gradient} opacity-80`}>
-            <span className="text-4xl font-bold tracking-tight text-white/90">{p.placeholder}</span>
-          </div>
-        )} */}
-
-        <Image
-          alt="project img"
-          src={p.image!}
-          width={300}
-          height={300}
-          className={`w-full absolute h-full object-cover visible opacity-100 ${
-            p?.second_image && "group-hover:invisible group-hover:opacity-0 "
-          } transition-all duration-300`}
-        />
-
-        {p?.second_image && (
-          <Image
-            alt="project img"
-            src={p?.second_image}
-            width={300}
-            height={300}
-            className="w-full absolute h-full object-cover invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300"
-          />
-        )}
-
-        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
-      </div>
-
-      <div className="relative p-5">
-        <div className="flex items-start justify-between gap-3">
-          <h3 className="text-lg font-semibold text-white">{p.name}</h3>
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-colors group-hover:bg-white/15 group-hover:text-white">
-            <ExternalLink size={15} />
-          </div>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-1.5">
-          {p.stack.map((t) => (
-            <span
-              key={t}
-              className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-white/70"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      </div>
-    </Link>
-  );
-}
 
 export function Projects() {
   const [activeTab, setActiveTab] = useState<"frontend" | "backend">("frontend");
@@ -176,5 +102,79 @@ export function Projects() {
         </Fade>
       )}
     </section>
+  );
+}
+
+function ProjectCard({ p }: { p: Project }) {
+  return (
+    <Link
+      href={p.link}
+      target="_blank"
+      className="cursor-pointer group relative overflow-hidden rounded-2xl border border-white/10 bg-white/4 backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-white/20"
+    >
+      <div
+        aria-hidden
+        className={`absolute -top-20 -right-20 h-48 w-48 rounded-full bg-linear-to-br ${p.gradient} opacity-60 blur-3xl transition-opacity group-hover:opacity-100`}
+      />
+      <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/30 to-transparent" />
+
+      <div className="relative h-48 w-full overflow-hidden">
+        {/* {p.image ? (
+          <Image
+            src={p.image}
+            alt={`${p.name} preview`}
+            width={512}
+            height={512}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className={`flex h-full w-full items-center justify-center bg-linear-to-br ${p.gradient} opacity-80`}>
+            <span className="text-4xl font-bold tracking-tight text-white/90">{p.placeholder}</span>
+          </div>
+        )} */}
+
+        <Image
+          alt="project img"
+          src={p.image!}
+          width={300}
+          height={300}
+          className={`w-full absolute h-full object-cover visible opacity-100 ${
+            p?.second_image && "group-hover:invisible group-hover:opacity-0 "
+          } transition-all duration-300`}
+        />
+
+        {p?.second_image && (
+          <Image
+            alt="project img"
+            src={p?.second_image}
+            width={300}
+            height={300}
+            className="w-full absolute h-full object-cover invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300"
+          />
+        )}
+
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+      </div>
+
+      <div className="relative p-5">
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-lg font-semibold text-white">{p.name}</h3>
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition-colors group-hover:bg-white/15 group-hover:text-white">
+            <ExternalLink size={15} />
+          </div>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-1.5">
+          {p.stack.map((t) => (
+            <span
+              key={t}
+              className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-white/70"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      </div>
+    </Link>
   );
 }
