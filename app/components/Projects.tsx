@@ -144,7 +144,7 @@ function ProjectCard({ p }: { p: Project }) {
       />
       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/30 to-transparent" />
 
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative h-48 w-full overflow-hidden ">
         {/* {p.image ? (
           <Image
             src={p.image}
@@ -180,7 +180,7 @@ function ProjectCard({ p }: { p: Project }) {
           />
         )}
 
-        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute group-hover:opacity-0 transition inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
       </div>
 
       <div className="relative p-5">
