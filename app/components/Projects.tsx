@@ -15,19 +15,23 @@ export type Project = {
   stack: string[];
   gradient: string;
   image: string | StaticImageData | null;
-  second_image: string | StaticImageData | null;
+  second_image?: string | StaticImageData | null;
   placeholder: string;
 };
+
 export type BackProject = {
   name: string;
   stack: string[];
   gradient: string;
   placeholder: string;
+  link: string;
+  image?: string
+  second_image?: string
 };
 
 export function Projects() {
   const [activeTab, setActiveTab] = useState<"frontend" | "backend">("frontend");
-  const projects = activeTab === "frontend" ? frontendProjects : [];
+  const projects = activeTab === "frontend" ? frontendProjects : backendProjects;
 
   const params = useSearchParams();
   const tabParam = params.get("tab");
@@ -131,7 +135,7 @@ export function Projects() {
   );
 }
 
-function ProjectCard({ p }: { p: Project }) {
+function ProjectCard({ p }: { p: Project | BackProject }) {
   return (
     <Link
       href={p.link}
