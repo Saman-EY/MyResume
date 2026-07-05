@@ -18,10 +18,10 @@ export function Contact() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    if (!turnstileToken) {
-      toast.error("Please complete the captcha.");
-      return;
-    }
+    // if (!turnstileToken) {
+    //   toast.error("Please complete the captcha.");
+    //   return;
+    // }
 
     if (!name || !email || !message) {
       toast.error("Please fill in all fields.");
@@ -34,7 +34,8 @@ export function Contact() {
       const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message, turnstileToken }),
+        // body: JSON.stringify({ name, email, message, turnstileToken }),
+        body: JSON.stringify({ name, email, message }),
       });
 
       const data = await res.json();
@@ -140,11 +141,11 @@ export function Contact() {
                         className="w-full rounded-xl border border-white/10 bg-white/4 px-4 py-3 text-sm text-white placeholder:text-white/35 outline-none transition-colors focus:border-white/30 focus:bg-white/[0.07]"
                       />
                     </div>
-                    <Turnstile
+                    {/* <Turnstile
                       siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
                       onSuccess={(token) => setTurnstileToken(token)}
                       onExpire={() => setTurnstileToken(null)}
-                    />
+                    /> */}
                     <button
                       type="submit"
                       disabled={loading}
