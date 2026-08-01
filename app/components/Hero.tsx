@@ -28,7 +28,7 @@ function Hero() {
             I'm a developer whose main expertise lies in frontend development, with nearly{" "}
             <span className=" font-bold text-(--accent-amber)">3 years</span> of hands-on experience building responsive
             and modern web interfaces using React, Next.js, and Tailwind CSS. I'm also comfortable working with backend
-            technologies like NestJS and Express, and I have about 6 months of experience developing REST APIs and
+            technologies like NestJS and Express, and I have about 8 months of experience developing REST APIs and
             backend services.
           </p>
 
