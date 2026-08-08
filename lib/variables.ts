@@ -9,16 +9,26 @@ export const frontendProjects: Project[] = [
     gradient: "from-rose-500/30 to-orange-500/20",
     image: "/trust1.png",
     second_image: "/trust2.png",
-    placeholder: "TS",
+    placeholder: "GS",
   },
   {
     name: "Bermooda",
-    link: "https://office.bermooda.app",
+    // link: "https://office.bermooda.app",
+    link: "https://bermooda.app",
     stack: ["Next.js", "Tailwind", "Redux", "Ant Design", "React Query", "TypeScript"],
     gradient: "from-fuchsia-500/30 to-violet-500/20",
     image: "/bermooda1.png",
     second_image: "/bermooda2.png",
     placeholder: "BM",
+  },
+  {
+    name: "Farkhonde Dolat (FullStack)",
+    link: "https://farkhonde-dolat-abad.ir",
+    stack: ["Nestjs", "PostgreSql", "TypeOrm", "Next.js", "TypeScript", "Tailwind", "Zustand", "React Query", "Shadcn"],
+    gradient: "from-rose-500/30 to-orange-500/20",
+    image: "/dolat1.png",
+    second_image: "/dolat2.png",
+    placeholder: "FD",
   },
   {
     name: "Atic Shop",
@@ -31,7 +41,8 @@ export const frontendProjects: Project[] = [
   },
   {
     name: "JahanZar",
-    link: "https://jahan-zar.vercel.app",
+    // link: "https://jahan-zar.vercel.app",
+    link: "https://jahanzar.com",
     stack: ["Next.js", "Tailwind", "Redux"],
     gradient: "from-amber-400/30 to-yellow-600/20",
     image: "/jahanzar1.png",
@@ -158,6 +169,15 @@ export const frontendProjects: Project[] = [
 ];
 
 export const backendProjects: BackProject[] = [
+  {
+    name: "Farkhonde Dolat (FullStack)",
+    link: "https://farkhonde-dolat-abad.ir",
+    stack: ["Nestjs", "PostgreSql", "TypeOrm", "Next.js", "TypeScript", "Tailwind", "Zustand", "React Query", "Shadcn"],
+    gradient: "from-rose-500/30 to-orange-500/20",
+    image: "/dolat1.png",
+    second_image: "/dolat2.png",
+    placeholder: "FD",
+  },
   {
     name: "Shop (Express)",
     link: "https://shop-express-kj5q.onrender.com/swagger/",
