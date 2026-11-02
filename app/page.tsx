@@ -5,6 +5,7 @@ import { Skills } from "./components/Skills";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import { Suspense } from "react";
+import { ContactLinks } from "./components/ContactLinks";
 
 function Page() {
   return (
@@ -34,15 +35,14 @@ function Page() {
           maskImage: "radial-gradient(ellipse at center, black 40%, transparent 80%)",
         }}
       />
-
       <Nav />
-
       <Hero />
       <Skills />
       <Suspense fallback={null}>
         <Projects />
       </Suspense>
-      <Contact />
+      {/* <Contact /> */}
+      <ContactLinks />
     </main>
   );
 }
