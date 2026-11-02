@@ -3,15 +3,35 @@ import truststakeImg from "@/public/project-yari.jpg";
 
 export const frontendProjects: Project[] = [
   {
+    name: "Dr Farzane Babaei",
+    link: "https://drfarzanebabaei.com/",
+    stack: ["Next.js", "TypeScript", "Tailwind", "Zustand", "React Query", "Framer Motion", "Shadcn", "Docker"],
+    gradient: "from-violet-500/30 to-violet-800/20",
+    image: "/farzane1.png",
+    second_image: "/farzane2.png",
+    video: "/farzane-vid.mp4",
+    gallery: ["/farzane3.png", "/farzane4.png", "/farzane5.png", "/farzane6.png", "/farzane7.png"],
+    placeholder: "FB",
+    details: [
+      "A full-featured platform where users can reserve appointments, pick their exact seats for events, buy from a cart-based shop, and enroll in courses.",
+      "It includes a complete admin panel for managing everything: appointments, events and seating, products and orders, and course content.",
+      "Built with Next.js and TypeScript, using Shadcn components styled with Tailwind CSS. Zustand handles client state (cart, seat selection), React Query handles data fetching and caching, Framer Motion adds the transitions, and the app is containerized with Docker for deployment.",
+    ],
+  },
+  {
     name: "GoldStake App",
     link: "https://goldstake.top/fa-IR",
     stack: ["Next.js", "TypeScript", "Tailwind", "Zustand", "PWA", "React Query", "Framer Motion"],
     gradient: "from-rose-500/30 to-orange-500/20",
     image: "/trust1.png",
     second_image: "/trust2.png",
+    gallery: ["/trust3.png", "/trust4.png", "/trust5.png", "/trust6.png", "/trust7.png", "/trust8.png"],
     placeholder: "GS",
+    details: [
+      "A gold staking web app with Persian (fa-IR) localization, shipped as an installable PWA so it feels like a native app on mobile.",
+      "Zustand handles client state, React Query handles server data and caching, and Framer Motion drives the page and component transitions.",
+    ],
   },
-
   {
     name: "Farkhonde Dolat (FullStack)",
     link: "https://farkhondedolat.com",
@@ -19,9 +39,24 @@ export const frontendProjects: Project[] = [
     gradient: "from-rose-500/30 to-orange-500/20",
     image: "/dolat1.png",
     second_image: "/dolat2.png",
+    gallery: [
+      "/dolat3.png",
+      "/dolat4.png",
+      "/dolat5.png",
+      "/dolat6.png",
+      "/dolat7.png",
+      "/dolat8.png",
+      "/dolat9.png",
+      "/dolat10.png",
+      "/dolat11.png",
+      "/dolat12.png",
+    ],
     placeholder: "FD",
+    details: [
+      "A full-stack web application with a NestJS REST API on PostgreSQL (TypeORM) and a Next.js frontend.",
+      "The interface uses Shadcn components with Tailwind, Zustand for client state, and React Query for data fetching.",
+    ],
   },
-
   {
     name: "JahanZar",
     // link: "https://jahan-zar.vercel.app",
@@ -30,16 +65,28 @@ export const frontendProjects: Project[] = [
     gradient: "from-amber-400/30 to-yellow-600/20",
     image: "/jahanzar1.png",
     second_image: "/jahanzar2.png",
+    gallery: ["/jahanzar3.png", "/jahanzar4.png"],
+    video: "/jahanzar-tut2.mp4",
     placeholder: "JZ",
+    details: ["A responsive website built with Next.js and Tailwind CSS, with Redux managing shared state across pages."],
   },
   {
     name: "DaneshBoomi",
     link: "https://daneshboomi.ir",
     stack: ["Next.js", "Tailwind", "Redux"],
-    gradient: "from-amber-400/30 to-yellow-600/20",
+    gradient: "from-teal-400/30 to-cyan-600/20",
     image: "/daneshboomi1.png",
     second_image: "/daneshboomi2.png",
+    gallery: [
+      "/daneshboomi3.png",
+      "/daneshboomi4.png",
+      "/daneshboomi5.png",
+      "/daneshboomi6.png",
+      "/daneshboomi7.png",
+      "/daneshboomi8.png",
+    ],
     placeholder: "DB",
+    details: ["A responsive website built with Next.js and Tailwind CSS, with Redux managing shared state across pages."],
   },
   {
     name: "Hamsoo",
@@ -48,7 +95,9 @@ export const frontendProjects: Project[] = [
     gradient: "from-blue-400/30 to-blue-600/20",
     image: "/hamsoo1.png",
     second_image: "/hamsoo2.png",
+    gallery: ["/hamsoo3.png", "/hamsoo4.png"],
     placeholder: "HS",
+    details: ["A responsive web app built with Next.js and Tailwind CSS, with Redux managing shared state across pages."],
   },
   {
     name: "Bazargan",
@@ -58,6 +107,7 @@ export const frontendProjects: Project[] = [
     image: "/bazargan1.png",
     second_image: "/bazargan2.png",
     placeholder: "BZ",
+    details: ["A typed Next.js frontend styled with Tailwind CSS, using Zustand for lightweight global state."],
   },
   {
     name: "Parvaz-Blourine",
@@ -67,6 +117,7 @@ export const frontendProjects: Project[] = [
     image: "/parvaz-blourin1.png",
     second_image: "/parvaz-blourin2.png",
     placeholder: "PB",
+    details: ["A Next.js and TypeScript website styled with Tailwind CSS, using React Context for shared state."],
   },
   {
     name: "PNG Downloader",
@@ -76,6 +127,10 @@ export const frontendProjects: Project[] = [
     image: "/dl1.png",
     second_image: "/dl2.png",
     placeholder: "PD",
+    details: [
+      "A multilingual tool for downloading PNG images, with translations handled by i18next.",
+      "This project isn't publicly deployed, so there is no live link.",
+    ],
   },
   {
     name: "Ali Qomi",
@@ -85,33 +140,43 @@ export const frontendProjects: Project[] = [
     image: "/vila1.png",
     second_image: "/vila2.png",
     placeholder: "AQ",
+    details: [
+      "A villa showcase site built with React and Tailwind CSS, with Framer Motion animations and Context for shared state.",
+    ],
   },
   {
     name: "Yari Plane — Landing",
     link: "https://yari-plane.vercel.app",
     stack: ["HTML", "CSS", "SASS", "JavaScript"],
-    gradient: "from-blue-400/30 to-indigo-500/20",
+    gradient: "from-sky-400/30 to-indigo-500/20",
     image: "/plane1.png",
     second_image: "/plane2.png",
     placeholder: "YP",
+    details: [
+      "A landing page built without a framework: semantic HTML, SASS-organized styles, and vanilla JavaScript for interactions.",
+    ],
   },
   {
     name: "Binex",
     link: "https://binex-virid.vercel.app",
     stack: ["React", "Tailwind"],
-    gradient: "from-blue-400/30 to-indigo-500/20",
+    gradient: "from-blue-500/30 to-violet-500/20",
     image: "/binex1.png",
     second_image: "/binex2.png",
     placeholder: "BX",
+    details: ["A React and Tailwind CSS interface with a responsive layout."],
   },
   {
     name: "Prime",
     link: "https://prime-link-gamma.vercel.app/en",
     stack: ["Next", "Tailwind", "Zustand", "I18Next"],
-    gradient: "from-blue-400/30 to-indigo-500/20",
+    gradient: "from-indigo-400/30 to-purple-500/20",
     image: "/prime1.png",
     second_image: "/prime2.png",
     placeholder: "PR",
+    details: [
+      "A multilingual Next.js site (the live link opens the English version) using i18next for translations and Zustand for state.",
+    ],
   },
   {
     name: "Cartan — Landing",
@@ -121,6 +186,9 @@ export const frontendProjects: Project[] = [
     image: "/cartan1.png",
     second_image: "/cartan2.png",
     placeholder: "CA",
+    details: [
+      "A landing page built without a framework: semantic HTML, SASS-organized styles, and vanilla JavaScript for interactions.",
+    ],
   },
   {
     name: "Tourist",
@@ -130,6 +198,7 @@ export const frontendProjects: Project[] = [
     image: "/tourist1.png",
     second_image: "/tourist2.png",
     placeholder: "TO",
+    details: ["A travel-themed page built from a Tailwind CSS template and customized."],
   },
   {
     name: "Shop Template",
@@ -139,6 +208,7 @@ export const frontendProjects: Project[] = [
     image: "/shop1.png",
     second_image: "/shop2.png",
     placeholder: "SH",
+    details: ["A clothing shop storefront template built with Next.js and Tailwind CSS."],
   },
   {
     name: "Cafe Template",
@@ -148,6 +218,7 @@ export const frontendProjects: Project[] = [
     image: "/cafe2.png",
     second_image: "/cafe1.png",
     placeholder: "CF",
+    details: ["A cafe website template built with semantic HTML, SASS-organized styles, and vanilla JavaScript."],
   },
   {
     name: "AKP Template",
@@ -157,6 +228,7 @@ export const frontendProjects: Project[] = [
     image: "/akp1.png",
     second_image: "/akp2.png",
     placeholder: "AK",
+    details: ["A landing page template built with semantic HTML, SASS-organized styles, and vanilla JavaScript."],
   },
   {
     name: "Mobix Template",
@@ -166,6 +238,7 @@ export const frontendProjects: Project[] = [
     image: "/mobix1.png",
     second_image: "/mobix2.png",
     placeholder: "MB",
+    details: ["A mobile-focused landing page template built with plain HTML, CSS, and JavaScript."],
   },
   {
     name: "Macan Choob",
@@ -175,6 +248,7 @@ export const frontendProjects: Project[] = [
     image: "/macan1.png",
     second_image: "/macan2.png",
     placeholder: "MC",
+    details: ["A woodwork company website built with semantic HTML, SASS-organized styles, and vanilla JavaScript."],
   },
   {
     name: "Tarhamo Template",
@@ -184,6 +258,9 @@ export const frontendProjects: Project[] = [
     image: "/tarhamo2.png",
     second_image: "/tarhamo1.png",
     placeholder: "TR",
+    details: [
+      "A design-studio style landing page template built with semantic HTML, SASS-organized styles, and vanilla JavaScript.",
+    ],
   },
   {
     name: "Bermooda",
@@ -194,6 +271,10 @@ export const frontendProjects: Project[] = [
     image: "/bermooda1.png",
     second_image: "/bermooda2.png",
     placeholder: "BM",
+    details: [
+      "A larger production web application built with Next.js and TypeScript, using Ant Design for the component library.",
+      "Redux manages complex client state, and React Query handles server data fetching and caching.",
+    ],
   },
   {
     name: "Atic Shop",
@@ -203,6 +284,9 @@ export const frontendProjects: Project[] = [
     image: "/atic1.png",
     second_image: "/atic2.png",
     placeholder: "AS",
+    details: [
+      "An online shop built with Next.js and TypeScript, using HeroUI components styled with Tailwind CSS and Redux for cart and shared state.",
+    ],
   },
 ];
 
@@ -215,28 +299,38 @@ export const backendProjects: BackProject[] = [
     image: "/dolat1.png",
     second_image: "/dolat2.png",
     placeholder: "FD",
+    details: [
+      "A full-stack web application with a NestJS REST API on PostgreSQL (TypeORM) and a Next.js frontend.",
+      "The interface uses Shadcn components with Tailwind, Zustand for client state, and React Query for data fetching.",
+    ],
   },
   {
     name: "Shop (Express)",
-    link: "https://shop-express-kj5q.onrender.com/swagger/",
+    // link: "https://shop-express-kj5q.onrender.com/swagger/",
     stack: ["Express.JS", "Sequelize", "Postgres", "Swagger", "Json Web Token", "Express Validation"],
     image: "/shop-express.png",
-    gradient: "",
-    second_image: "",
+    gradient: "from-emerald-400/30 to-teal-500/20",
     placeholder: "API",
+    details: [
+      "An e-commerce REST API built with Express.js and Sequelize on PostgreSQL.",
+      "Authentication uses JSON Web Tokens, requests are validated with Express Validation, and every endpoint is documented in Swagger. The link opens the live docs.",
+    ],
   },
   {
     name: "Shop (Nest)",
-    link: "https://shop-nestjs-latest.onrender.com/swagger",
+    // link: "https://shop-nestjs-latest.onrender.com/swagger",
     stack: ["Nest.JS", "TypeOrm", "Postgres", "Swagger", "Json Web Token", "Class Validator"],
     image: "/shop-nestjs.png",
-    gradient: "",
-    second_image: "",
+    gradient: "from-rose-500/30 to-red-500/20",
     placeholder: "API",
+    details: [
+      "An e-commerce REST API built with NestJS and TypeORM on PostgreSQL.",
+      "Authentication uses JSON Web Tokens, DTOs are validated with Class Validator, and every endpoint is documented in Swagger. The link opens the live docs.",
+    ],
   },
   {
     name: "Divar Demo (Express)",
-    link: "https://divar-express.onrender.com/swagger/",
+    // link: "https://divar-express.onrender.com/swagger/",
     stack: [
       "Express.JS",
       "Mongoose",
@@ -249,26 +343,35 @@ export const backendProjects: BackProject[] = [
       "axios",
     ],
     image: "/divar.png",
-    gradient: "",
-    second_image: "",
+    gradient: "from-red-400/30 to-orange-500/20",
     placeholder: "API",
+    details: [
+      "A classified-ads backend modeled on Divar, built with Express.js and Mongoose on MongoDB.",
+      "It handles cookie-based sessions, image uploads with Multer, server-rendered pages with EJS, and request validation, with the API documented in Swagger.",
+    ],
   },
   {
     name: "SnapFood Demo (Nest)",
-    link: "https://snapfood-nestjs.onrender.com/swagger",
+    // link: "https://snapfood-nestjs.onrender.com/swagger",
     stack: ["Nest.JS", "TypeOrm", "Postgres", "Swagger", "Passport", "Class Validator", "AWS (S3 Storage)", "Multer"],
     image: "/snapfood.png",
-    gradient: "",
-    second_image: "",
+    gradient: "from-pink-400/30 to-rose-500/20",
     placeholder: "API",
+    details: [
+      "A food-delivery backend modeled on SnapFood, built with NestJS and TypeORM on PostgreSQL.",
+      "Authentication uses Passport, uploaded files are stored on AWS S3 via Multer, inputs are validated with Class Validator, and the API is documented in Swagger.",
+    ],
   },
   {
     name: "Virgool Demo (Nest)",
-    link: "https://virgool-nestjs.onrender.com/swagger",
+    // link: "https://virgool-nestjs.onrender.com/swagger",
     stack: ["Nest.JS", "TypeOrm", "Postgres", "Swagger", "Bcrypt", "Cookie Parser", "Class Validator", "Multer"],
     image: "/virgool.png",
-    gradient: "",
-    second_image: "",
+    gradient: "from-violet-400/30 to-indigo-500/20",
     placeholder: "API",
+    details: [
+      "A blogging platform backend modeled on Virgool, built with NestJS and TypeORM on PostgreSQL.",
+      "Passwords are hashed with Bcrypt, sessions use cookies, uploads go through Multer, inputs are validated with Class Validator, and the API is documented in Swagger.",
+    ],
   },
 ];

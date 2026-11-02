@@ -8,15 +8,20 @@ import { backendProjects, frontendProjects } from "@/lib/variables";
 import { Fade, Slide } from "react-awesome-reveal";
 import { useSearchParams } from "next/navigation";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/lib/ui/carousel";
+import { ProjectModal } from "./ProjectModal";
 
 export type Project = {
   name: string;
-  link: string;
+  link?: string;
   stack: string[];
   gradient: string;
   image: string | StaticImageData | null;
   second_image?: string | StaticImageData | null;
   placeholder: string;
+  description?: string;
+  details?: string[]; // multiple paragraphs, used instead of description
+  gallery?: (string | StaticImageData)[]; // extra images
+  video?: string;
 };
 
 export type BackProject = {
@@ -24,13 +29,18 @@ export type BackProject = {
   stack: string[];
   gradient: string;
   placeholder: string;
-  link: string;
-  image?: string
-  second_image?: string
+  link?: string;
+  image?: string;
+  second_image?: string;
+  description?: string;
+  details?: string[]; // multiple paragraphs, used instead of description
+  gallery?: (string | StaticImageData)[]; // extra images
+  video?: string;
 };
 
 export function Projects() {
   const [activeTab, setActiveTab] = useState<"frontend" | "backend">("frontend");
+  const [selected, setSelected] = useState<Project | BackProject | null>(null);
   const projects = activeTab === "frontend" ? frontendProjects : backendProjects;
 
   const params = useSearchParams();
@@ -92,7 +102,7 @@ export function Projects() {
           </div>
         </Slide>
       </div>
-
+      {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
       {projects.length === 0 ? (
         <Fade direction="up" cascade duration={1000} triggerOnce>
           <div className="flex h-48 items-center justify-center rounded-2xl border border-white/10 bg-white/4 backdrop-blur-xl">
@@ -110,7 +120,7 @@ export function Projects() {
                     <CarouselItem key={slideIdx} className="pl-5 pt-2 basis-full">
                       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {slideProjects.map((p) => (
-                          <ProjectCard key={p.name} p={p} />
+                          <ProjectCard key={p.name} p={p} onOpen={setSelected} />
                         ))}
                       </div>
                     </CarouselItem>
@@ -125,7 +135,7 @@ export function Projects() {
           ) : (
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {projects.map((p) => (
-                <ProjectCard key={p.name} p={p} />
+                <ProjectCard key={p.name} p={p} onOpen={setSelected} />
               ))}
             </div>
           )}
@@ -135,11 +145,18 @@ export function Projects() {
   );
 }
 
-function ProjectCard({ p }: { p: Project | BackProject }) {
+function ProjectCard({ p, onOpen }: { p: Project | BackProject; onOpen: (p: Project | BackProject) => void }) {
   return (
-    <Link
-      href={p.link}
-      target={p.link ? "_blank" : "_self"}
+   <div
+      role="button"
+      tabIndex={0}
+      onClick={() => onOpen(p)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen(p);
+        }
+      }}
       className="cursor-pointer group relative overflow-hidden rounded-2xl border border-white/10 bg-white/4 backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-white/20"
     >
       <div
@@ -196,16 +213,13 @@ function ProjectCard({ p }: { p: Project | BackProject }) {
         </div>
         <div className="mt-4 flex flex-wrap gap-1.5">
           {p.stack.map((t) => (
-            <span
-              key={t}
-              className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-white/70"
-            >
+            <span key={t} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] text-white/70">
               {t}
             </span>
           ))}
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
 
