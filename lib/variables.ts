@@ -129,6 +129,18 @@ export const frontendProjects: Project[] = [
     details: ["A responsive web app built with Next.js and Tailwind CSS, with Redux managing shared state across pages."],
   },
   {
+    name: "Atic Shop",
+    link: "https://attic.ir",
+    stack: ["Next.js", "TypeScript", "Tailwind", "HeroUI", "Redux"],
+    gradient: "from-sky-400/30 to-cyan-500/20",
+    image: "/atic1.png",
+    second_image: "/atic2.png",
+    placeholder: "AS",
+    details: [
+      "An online shop built with Next.js and TypeScript, using HeroUI components styled with Tailwind CSS and Redux for cart and shared state.",
+    ],
+  },
+  {
     name: "Bazargan",
     link: "https://baazargaan.com",
     stack: ["Next.js", "TypeScript", "Tailwind", "Zustand"],
@@ -303,18 +315,6 @@ export const frontendProjects: Project[] = [
     details: [
       "A larger production web application built with Next.js and TypeScript, using Ant Design for the component library.",
       "Redux manages complex client state, and React Query handles server data fetching and caching.",
-    ],
-  },
-  {
-    name: "Atic Shop",
-    link: "https://atticbv.com",
-    stack: ["Next.js", "TypeScript", "Tailwind", "HeroUI", "Redux"],
-    gradient: "from-sky-400/30 to-cyan-500/20",
-    image: "/atic1.png",
-    second_image: "/atic2.png",
-    placeholder: "AS",
-    details: [
-      "An online shop built with Next.js and TypeScript, using HeroUI components styled with Tailwind CSS and Redux for cart and shared state.",
     ],
   },
 ];
